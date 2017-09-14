@@ -1,0 +1,8 @@
+<?php
+if($this->params['goods']){
+    foreach ($this->params['goods'] as $item) {
+        echo '<div class="good"><h2><a class="detail" href="\good\detail?id=' .$item['id'] . '">' . $item['good_name'] . '</a></h2><h3 class="price">US $ ' . $item['price'] . ' / шт.</h3><img src="/images/' . $item['path'] . '" /></div>';
+    }
+}else{
+    echo 'Нет товаров';
+}
